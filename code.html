@@ -3,27 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Code Secret</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Code Secret - Saint Valentin</title>
+  <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+  <script>
+    function checkCode() {
+      const userCode = document.getElementById("codeInput").value;
+      const correctCode = "amour2025"; // Code secret à entrer
+
+      if (userCode === correctCode) {
+        document.getElementById("message").innerHTML = '<a href="photos/surprise.jpg" target="_blank">Cliquez ici pour voir votre surprise !</a>';
+      } else {
+        document.getElementById("message").innerHTML = "Code incorrect. Essayez encore !";
+      }
+    }
+  </script>
 </head>
 <body>
+
   <header>
-    <h1>Le code secret</h1>
+    <h1>Code Secret</h1>
   </header>
 
   <main>
-    <p>Félicitations pour avoir résolu toutes les énigmes ! Entrez le code secret pour découvrir la surprise finale.</p>
-    <form id="code-form">
-      <input type="password" id="code" placeholder="Code secret" required>
+    <h2>Tu as presque fini ! Entrez le code secret pour découvrir la surprise :</h2>
+    
+    <form onsubmit="event.preventDefault(); checkCode();">
+      <input type="text" id="codeInput" placeholder="Entrez le code secret" required>
       <button type="submit">Valider</button>
     </form>
-    <p id="message"></p>
+
+    <p id="message"></p> <!-- Affichage du message ou du lien de surprise -->
+
   </main>
 
   <footer>
-    <p>Créé avec amour par ton loveur !</p>
+    <p>&copy; 2025 - Ton site spécial Saint-Valentin</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
