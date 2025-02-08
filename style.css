@@ -1,0 +1,104 @@
+/* Général */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fdf4f4; /* Couleur de fond douce */
+  color: #333; /* Couleur de texte */
+}
+
+h1, h2 {
+  color: #ff6f61; /* Couleur des titres en rouge/rose */
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffcccb;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffcccb;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Mise en page de la page principale */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Design des photos des mois */
+.mois {
+  text-align: center;
+  width: 200px;
+}
+
+.mois-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.mois-photo:hover {
+  transform: scale(1.1); /* Zoom sur la photo au survol */
+}
+
+.mois p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Formulaire de l'énigme */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 10px;
+  width: 250px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff4f3f; /* Effet de survol */
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff6f61;
+}
